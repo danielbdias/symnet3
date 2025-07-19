@@ -4,8 +4,6 @@ import multiprocessing
 import my_config
 from env_instance_wrapper import EnvInstanceWrapper
 import time
-import pickle
-import pdb
 import random
 import numpy as np
 

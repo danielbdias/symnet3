@@ -2,10 +2,9 @@ import tensorflow as tf
 from tensorflow.keras import initializers, regularizers, constraints
 from tensorflow.keras.layers import Dropout
 
-from spektral.layers.convolutional.gcn import GraphConv
-import numpy as np
+from spektral.layers.convolutional.conv import Conv
 
-class GraphAttentionDistance(GraphConv):
+class GraphAttentionDistance(Conv):
     # This is the Influence Layer defined in the paper. 
     def __init__(self,
                  channels,

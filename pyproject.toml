@@ -1,0 +1,27 @@
+[project]
+name = "symnet3"
+version = "0.1.0"
+description = "SymNet3.0: Exploiting Long-Range Influences in Learning Generalized Neural Policies for Relational MDPs"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "joblib",
+    "matplotlib",
+    "mock",
+    "networkx",
+    "numpy",
+    "pandas",
+    "pygame",
+    "pytest",
+    "rdkit",
+    "requests",
+    "rl_algs",
+    "scikit_learn",
+    "scipy",
+    "setuptools",
+    "spektral",
+    "six",
+    "tabulate",
+    "tensorflow",
+    "tqdm",
+]

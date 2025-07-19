@@ -1,9 +1,8 @@
-from builtins import dict
-
 import tensorflow as tf
 from tensorflow.keras import backend as K, initializers, regularizers, constraints
-from spektral.layers import GraphAttention, TopKPool, MinCutPool, GraphAttentionDistance
-from spektral.layers.convolutional.gnn_cnn_style import GNNCNNStyle
+from spektral.layers import MinCutPool
+from spektral.layers.convolutional.gat_conv import GATConv as GraphAttention
+from .custom import GraphAttentionDistance
 
 # Todo try kernel regularizer, dropout, vary num_attn_heads, attn_kernel_regularizer (SEE ORIGINAL CODE FOR )
 # https://github.com/danielegrattarola/spektral/blob/master/examples/node_prediction/citation_gat.py
