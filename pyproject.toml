@@ -5,6 +5,9 @@ description = "SymNet3.0: Exploiting Long-Range Influences in Learning Generaliz
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "bayesian-optimization>=2.0.0",
+    "dash-bootstrap-components>=1.6.0",
+    "dash>=2.18.0",
     "joblib",
     "matplotlib",
     "mock",
@@ -13,14 +16,15 @@ dependencies = [
     "pandas",
     "pygame",
     "pytest",
+    "rddlrepository>=2.0",
     "rdkit",
     "requests",
     "rl_algs",
     "scikit_learn",
     "scipy",
     "setuptools",
-    "spektral",
     "six",
+    "spektral",
     "tabulate",
     "tensorflow",
     "tqdm",

@@ -14,7 +14,7 @@ academic_advising_prob(EAcad), navigation(DNav), corridor(StNav), recon(SRecon),
 
 setting = "ippc" # Set to ippc to run on ippc domains and lr to run on lr domains
 exp_description = "standard" # suffix for model folder
-domain = "navigation" # Domain to be tested on
+domain = "wildfire" # Domain to be tested on
 model_dir =  "models/" # Path to model
 
 num_validation_episodes = 5 # Validation episodes for each epoch
@@ -44,7 +44,8 @@ split_dbn = False
 use_type_encoding = True
 use_fluent_for_kl = True
 num_threads = 4 # Number of threads to parallelize inference
-mode = "no_kl"
+#mode = "no_kl"
+mode = "no_dist"
 
 if mode == 'no_dist': # SymNet2.0
     add_aux_loss = False

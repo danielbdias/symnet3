@@ -206,6 +206,10 @@ if __name__ == '__main__':
         if my_config.domain == 'triangle_tireworld':
             my_config.train_instance = ",".join(str(1000+i) for i in range(100)) # Generator doesn't have enough diversity in parameters, only need a 100 instances
             my_config.test_instance = ",".join(str(1100+i) for i in range(10))
+            
+        if my_config.domain == 'wildfire':
+            my_config.train_instance = ",".join([str(i) for i in range(75)])
+            my_config.test_instance = ",".join(str(i+74) for i in range(25))
     
     elif my_config.setting == "lr":
         if my_config.domain == 'recon':
@@ -232,4 +236,6 @@ if __name__ == '__main__':
     print("Domain: ", my_config.domain)
     print("Model dir: ", my_config.model_dir)
     print(my_config.train_instance, my_config.test_instance)
+    
+    # Trigger training procedures
     train()
