@@ -11,6 +11,14 @@ for i in range(0, 100):
             'instance': '{}'.format(i),
         })
 
+    register(
+        id='RDDL-navigation{}-v1'.format(i),
+        entry_point='gym.envs.rddl:RDDLEnv',
+        kwargs={
+            'domain': 'navigation',
+            'instance': '{}'.format(i)
+        })
+
 # for i in range(1, 10100):
 #     register(
 #         id='RDDL-academic_advising{}-v1'.format(i),

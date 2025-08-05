@@ -1,0 +1,74 @@
+non-fluents nf_navigation_inst_mdp__3 {
+	domain = navigation_mdp;
+	objects {
+		xpos : {x1,x2,x3,x4,x5};
+		ypos : {y1,y2,y3,y4,y5,y6,y7};
+	};
+	non-fluents {
+		NORTH(y1,y2);
+		SOUTH(y2,y1);
+		NORTH(y2,y3);
+		SOUTH(y3,y2);
+		NORTH(y3,y4);
+		SOUTH(y4,y3);
+		NORTH(y4,y5);
+		SOUTH(y5,y4);
+		NORTH(y5,y6);
+		SOUTH(y6,y5);
+		NORTH(y6,y7);
+		SOUTH(y7,y6);
+
+		EAST(x1,x2);
+		WEST(x2,x1);
+		EAST(x2,x3);
+		WEST(x3,x2);
+		EAST(x3,x4);
+		WEST(x4,x3);
+		EAST(x4,x5);
+		WEST(x5,x4);
+
+		MIN-XPOS(x1);
+		MAX-XPOS(x5);
+		MIN-YPOS(y1);
+		MAX-YPOS(y7);
+
+		GOAL(x5,y7);
+
+		P(x1,y2) = 0.012812699569402184;
+		P(x1,y3) = 0.029488050898804415;
+		P(x1,y4) = 0.05566075392237987;
+		P(x1,y5) = 0.03162109565473022;
+		P(x1,y6) = 0.04992069638336246;
+		P(x2,y2) = 0.2690192834689315;
+		P(x2,y3) = 0.24380111157995643;
+		P(x2,y4) = 0.23957566104777403;
+		P(x2,y5) = 0.2654987401850175;
+		P(x2,y6) = 0.2701818465242874;
+		P(x3,y2) = 0.4980860294576298;
+		P(x3,y3) = 0.4790265235904153;
+		P(x3,y4) = 0.5074251571706149;
+		P(x3,y5) = 0.46902144409243923;
+		P(x3,y6) = 0.46365833453448063;
+		P(x4,y2) = 0.7196303575523977;
+		P(x4,y3) = 0.7290229285555744;
+		P(x4,y4) = 0.6899254795961407;
+		P(x4,y5) = 0.7207112083160823;
+		P(x4,y6) = 0.6962728987723694;
+		P(x5,y2) = 0.9192452645654021;
+		P(x5,y3) = 0.9125568981847597;
+		P(x5,y4) = 0.9294978808031987;
+		P(x5,y5) = 0.9285549854658115;
+		P(x5,y6) = 0.9372875743037413;
+	};
+}
+
+instance navigation_inst_mdp__3 {
+	domain = navigation_mdp;
+	non-fluents = nf_navigation_inst_mdp__3;
+	init-state {
+		robot-at(x5,y1);
+	};
+	max-nondef-actions = 1;
+	horizon = 100;
+	discount = 0.95;
+}

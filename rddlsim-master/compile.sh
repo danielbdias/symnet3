@@ -18,4 +18,5 @@ done
 
 rm -rf $BINDIR
 mkdir $BINDIR
-javac -Xlint:none -Xlint:deprecation -Xlint:unchecked -classpath $CP -d $BINDIR src/*/*.java src/*/*/*.java src/*/*/*/*.java
+# javac -Xlint:none -Xlint:deprecation -Xlint:unchecked -classpath $CP -d $BINDIR src/*/*.java src/*/*/*.java src/*/*/*/*.java
+javac -Xlint:none -classpath $CP -d $BINDIR src/*/*.java src/*/*/*.java src/*/*/*/*.java

@@ -57,6 +57,7 @@ def main():
         
         instance_name = f"wildfire_inst_mdp__{instance_number}"
         
+        ## TODO: add a way to generate random patterns in the instance, to guarantee that we are solving just one pattern
         content = generator.generate_instance(
             instance_name=instance_name,
             targets=get_targets(x_size, y_size),

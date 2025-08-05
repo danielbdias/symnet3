@@ -14,7 +14,7 @@ academic_advising_prob(EAcad), navigation(DNav), corridor(StNav), recon(SRecon),
 
 setting = "ippc" # Set to ippc to run on ippc domains and lr to run on lr domains
 exp_description = "standard" # suffix for model folder
-domain = "wildfire" # Domain to be tested on
+domain = "navigation" # Domain to be tested on
 model_dir =  "models/" # Path to model
 
 num_validation_episodes = 5 # Validation episodes for each epoch
