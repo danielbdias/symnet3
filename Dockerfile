@@ -50,13 +50,17 @@ RUN asdf install uv 0.7.21
 RUN asdf plugin add java
 RUN asdf install java openjdk-24.0.2
 
-# copy symnet files and prost files
-WORKDIR /workspace
-
-COPY . /workspace/symnet3
-
-COPY --from=builder /workspace/prost/builds/release/rddl_parser/rddl-parser /workspace/symnet3/rddl/lib/rddl-parser
-
+# install symnet3 dependencies
 WORKDIR /workspace/symnet3
 
+COPY ./requirements.txt /workspace/symnet3/requirements.txt
+COPY ./uv.lock /workspace/symnet3/uv.lock
+COPY ./.tool-versions /workspace/symnet3/.tool-versions
+COPY ./pyproject.toml /workspace/symnet3/pyproject.toml
+
 RUN uv sync
+
+WORKDIR /workspace/prost
+COPY --from=builder /workspace/prost/builds/release/rddl_parser/rddl-parser /workspace/prost/rddl-parser
+
+WORKDIR /workspace/symnet3

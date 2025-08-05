@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # fail if any errors
 set -e
@@ -13,6 +13,6 @@ for i in "${domains[@]}"
 do
 	for j in "${instances[@]}"
 	do
-    	./new_instance.sh "rddl/domains/"$i"_mdp.rddl" "rddl/domains/"$i"_inst_mdp__"$j".rddl" $i"_inst_mdp__"$j $j
+    	./rddlsim-master/new_instance.sh "rddl/domains/"$i"_mdp.rddl" "rddl/domains/"$i"_inst_mdp__"$j".rddl" $i"_inst_mdp__"$j $j
     done
 done

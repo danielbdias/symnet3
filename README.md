@@ -69,3 +69,5 @@ The most important parameters are:
 
 
 Feel free to contact the authors if you run into issues.
+
+docker run -it --rm -v $PWD:/workspace/symnet3 symnet3 bash
